@@ -1,7 +1,7 @@
 import { ALL_POSTS } from "@/constants";
 import { PostCard } from "./_components/post-card";
 
-export default function () {
+export default function Home() {
   return (
     <main className="w-full max-w-screen-lg mx-auto py-10 h-full">
       <h1 className="text-2xl font-medium">All Posts</h1>
