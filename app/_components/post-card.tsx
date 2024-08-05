@@ -34,7 +34,7 @@ export const PostCard = ({ title, content, tags, author, slug }: Post) => {
       </p>
 
       <div className="flex items-center gap-2 flex-wrap mt-4">
-        {SHARE_LINKS.map((el) => (
+        {SHARE_LINKS.map((el, index) => (
           <div
             className="rounded-full border hover:bg-gray-200/30 p-2"
             onClick={(e) => {
@@ -42,6 +42,7 @@ export const PostCard = ({ title, content, tags, author, slug }: Post) => {
               navigator.clipboard.writeText(el.href);
               alert("Link copied to clipboard!");
             }}
+            key={index}
           >
             <el.icon size={14} />
           </div>
