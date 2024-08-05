@@ -22,11 +22,6 @@ export async function GET(req: Request) {
     ),
   ]);
 
-  const size = {
-    width: 1200,
-    height: 630,
-  };
-
   return new ImageResponse(
     (
       <div tw="p-10 bg-[#dfe6e9] flex flex-col justify-between h-full w-full">
@@ -42,7 +37,8 @@ export async function GET(req: Request) {
       </div>
     ),
     {
-      ...size,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: "Outfit",
