@@ -4,11 +4,6 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-const size = {
-  width: 1200,
-  height: 630,
-};
-
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
 
@@ -26,6 +21,11 @@ export async function GET(req: Request) {
       (res) => res.arrayBuffer()
     ),
   ]);
+
+  const size = {
+    width: 1200,
+    height: 630,
+  };
 
   return new ImageResponse(
     (
